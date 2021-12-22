@@ -1,0 +1,107 @@
+.card-header{
+	text-align: center;
+}
+.flex{
+	display: flex;
+    flex: 1 1 auto;
+}
+.picker-input{
+	position: absolute;
+	left: 0;
+	top: 0;
+    clip: rect(0, 0px, 1px, 1px);
+    padding: 0px;
+    border: none;
+	outline: none;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+.bg-proceeded {
+	background-color:#25a6e5!important
+}
+body {
+	background-size:cover;
+	padding-top:0!important;
+}
+.bg-primary {
+	background-color:#2196f3!important;
+	background: linear-gradient(90deg, #53e8fb 7.5%, #34d8ed 20%, #349aed 40%, #515c9d 100%);
+}
+#uploads-file{
+	text-align: center;
+}
+.visible{
+	display: none !important;
+}
+.form-control {
+	font-size: 1rem;
+	position: relative;
+	height: 180px !important;
+	padding-left:1rem!important;
+	border:1px dashed #2196f3;
+}
+.form-control span{
+	font-size: 19px;
+}
+.cloud{
+	margin: 0 auto;
+	width: 100px;
+	height: 100px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 100px 100px;
+	background-image: url(../images/cloud_upload_black_36dp.svg);
+}
+#uploading{
+
+}
+.svg{
+	margin: 0 auto;
+	width: 100px;
+	height: 180px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 100px 100px;
+	background-image: url(../images/uploading.svg);
+	animation:rotate 15s infinite;
+	-webkit-animation:rotate 15s infinite; /* Safari 和 Chrome */
+}
+
+@keyframes rotate
+{
+from {transform:rotate(0deg);}
+to {transform:rotate(360deg);}
+}
+
+.top {
+	margin-top:10px;
+	margin-bottom:60px
+}
+@media (min-width: 1300px) {
+	.container {
+		max-width: 1260px;
+	}
+}
+.body-particles{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	left: 0;
+	z-index: 100;
+}
+#particles{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background: linear-gradient(90deg, #53e8fb 7.5%, #34d8ed 20%, #349aed 40%, #515c9d 100%);
+}
+.logo{
+	width: 280px;
+}
+h1, .h1 {
+	font-size: 1.21875rem;
+}

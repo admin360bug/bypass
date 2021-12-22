@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh_cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+    <title>开普勒星云免杀平台开源版</title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+    <link rel="stylesheet" type="text/css" href="./res/bootstrap.min.css" /> 
+    <link rel="stylesheet" type="text/css" href="./res/index.css" /> 
+ </head>
+ <body> 
+  <div class="body-particles"> 
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary"> 
+            <div class="container"> 
+                <a class="navbar-brand" href="/">
+                    <img src="./images/logo.png" class="logo">
+                </a> 
+            </div> 
+    </nav> 
+   <div class="d-md-none" style="margin-top:10px;"></div> 
+   <div class="container top"> 
+    <div class="card"> 
+     <div class="card-header bg-primary text-white">
+         <h1>开普勒星云免杀平台开源版</h1>
+    </div> 
+     <div class="card-body"> 
+      <form action="action.php" method="post" accept-charset="utf-8" enctype="multipart/form-data"> 
+        <div class="form-group">
+            <span>选择提交免杀模式：</span>
+            <div class="form-check-inline">
+                <input class="form-check-input" type="radio" name="mode" id="mode-code" value="shellcode" checked=checked required>
+                <label class="form-check-label" for="mode-code">ShellCode</label>
+            </div>
+            <div class="form-check-inline">
+                <input class="form-check-input" type="radio" name="mode" id="mode-file" value="file" required>
+                <label class="form-check-label" for="mode-file">文件</label>
+            </div>
+        </div>
+       <div class="form-group"> 
+           <div id="file-input" class="visible">
+                <label class="form-control" for="picker-input" id="uploads-file">
+                    <div class="cloud"></div>
+                    <p class="input-message">拖放文件至此处</p> 
+                    <input id="picker-input" type="file" multiple="" accept="" class="picker-input" name="file"/> 
+                </label>
+           </div>
+           <div id="code-input">
+                <input class="form-control pl-3" placeholder="请输入ShellCode..." name="shellcode"/> 
+           </div>
+           <div id="uploading" style="display: none;">
+                <div class="svg"></div>
+           </div>
+
+       </div>  
+       <div class="text-center"> 
+        <button type="submit" class="px-4 btn btn-primary" id="tijiao">生成</button> 
+       </div>
+      </form>
+     </div> 
+    </div> 
+    <div class="mt-5"></div> 
+    <div class="card"> 
+     <div class="card-header bg-primary text-white" align="center"> 
+      <h4>免责声明</h4> 
+     </div> 
+     <div class="card-body"> 
+      <p>免杀全称为反杀毒技术(Anti Anti- Virus)简称免杀，是一种能够使病毒木马等文件免于被杀毒软件查杀的技术。</p> 
+      <p>本站(开普勒星云免杀平台)所有功能及数据仅可用于信息安全评估,严禁用于任何非法用途,如有违反任何法律本站不承担任何责任。</p>
+     </div> 
+    </div> 
+   </div>
+  </div> 
+  <div id="particles"></div> 
+  <script src="res/jquery-1.8.3.min.js"></script>
+  </div>
+  <script>
+    //   var input = document.getElementById("picker-input");
+    //   input.addEventListener('change', (event) => {
+    //     const result = document.querySelector('.input-message');
+    //     result.textContent = `已上传：${event.target.value}`;
+    //  });
+    $(document).ready(function(){
+        $("form").submit(function(e){
+            $("#code-input").hide();
+            $("#tijiao").hide();
+            $("#uploading").show();
+        });
+    });
+   </script>   
+ </body>
+</html>
