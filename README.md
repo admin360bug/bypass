@@ -36,7 +36,7 @@
 
 ## 0x01界面：
 
-![](C:\Users\admin\Documents\xingyu-miansha\img\1.png)
+![](./img/1.png)
 
 ## 0x02主要实现的核心代码：
 
